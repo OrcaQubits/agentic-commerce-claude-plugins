@@ -1,6 +1,6 @@
 ---
 name: a2a-framework-integration
-description: Integrate A2A with agent frameworks — Google ADK, LangGraph, CrewAI, AutoGen, and AWS Bedrock AgentCore. Use when connecting framework-built agents to the A2A protocol for inter-agent communication.
+description: Integrate A2A with agent frameworks — Google ADK, LangGraph, CrewAI, AutoGen, AWS Bedrock AgentCore, and Microsoft Azure AI Foundry. Use when connecting framework-built agents to the A2A protocol for inter-agent communication.
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
 ---
 
@@ -16,6 +16,7 @@ allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
    - `site:langchain-ai.github.io langgraph a2a` for LangGraph
    - `site:docs.crewai.com a2a` for CrewAI
    - `site:docs.aws.amazon.com bedrock agentcore a2a` for AWS Bedrock
+   - `site:learn.microsoft.com azure ai-foundry a2a` for Microsoft Azure AI Foundry
 4. Fetch SDK docs for framework adapter classes
 
 ## Conceptual Architecture
@@ -73,6 +74,16 @@ AWS Bedrock has added A2A support:
 
 **Integration approach**: Use Bedrock's A2A-compatible agent hosting and client utilities.
 
+### Microsoft Azure AI Foundry
+
+Azure AI Foundry includes A2A support as part of its multi-agent orchestration stack:
+- Foundry-hosted agents can be exposed as A2A servers and consumed as A2A clients
+- Connected Agents and Multi-Agent Workflows interoperate with external A2A endpoints
+- Authentication integrates with Microsoft Entra ID
+- A2A is positioned alongside MCP for cross-vendor agent interoperability
+
+**Integration approach**: Use Foundry's built-in A2A bindings on agent definitions, and the Foundry SDK's A2A client utilities for outbound calls. Verify the current binding shape against Microsoft Learn before implementing — the surface is evolving.
+
 ### General Integration Pattern
 
 Regardless of framework, the pattern is:
@@ -97,6 +108,7 @@ Different frameworks manage state differently:
 - **CrewAI**: Crew execution state → A2A task state
 - **AutoGen**: Conversation history → A2A message history
 - **ADK**: Native A2A alignment (minimal mapping needed)
+- **Azure AI Foundry**: Connected Agents / Multi-Agent Workflow state → A2A task state
 
 ### Best Practices
 

@@ -1,6 +1,6 @@
 # AP2 Agentic Payments Plugin for Claude Code
 
-A deeply expert Claude Code plugin for implementing the **AP2 (Agent Payments Protocol)** — Google's open protocol for secure, verifiable, and interoperable AI-driven payments in agentic commerce.
+A deeply expert Claude Code plugin for implementing the **AP2 (Agent Payments Protocol)** — an open protocol for secure, verifiable, and interoperable AI-driven payments in agentic commerce. Originally created by Google; contributed to the FIDO Alliance in April 2026, where it is now stewarded by the Payments and Agentic Authentication Technical Working Groups.
 
 ## Design Philosophy
 
@@ -212,6 +212,6 @@ MCP (Agent-to-Tool/Data Access)
 | x402 Integration | https://github.com/google-agentic-commerce/a2a-x402 |
 | Google Cloud Blog | https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol |
 
-## Endorsed By
+## Governance & Endorsement
 
-Google, Mastercard, Adyen, PayPal, Coinbase, Visa, American Express, Stripe, and 60+ initial partners.
+Stewarded by the **FIDO Alliance** (donation accepted April 2026). Original contributors and endorsing partners include Google, Mastercard, Adyen, PayPal, Coinbase, Visa, American Express, Stripe, and 60+ ecosystem participants.

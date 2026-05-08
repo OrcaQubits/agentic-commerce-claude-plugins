@@ -12,7 +12,7 @@ allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
 1. Fetch `https://ap2-protocol.org/specification/` for the human-not-present flow specification
 2. Web-search `site:github.com google-agentic-commerce AP2 human-not-present intent mandate` for samples
 3. Fetch `https://ap2-protocol.org/topics/core-concepts/` for flow overview
-4. Fetch `https://ap2-protocol.org/roadmap/` to check current support level (V0.1 scope)
+4. Fetch `https://ap2-protocol.org/roadmap/` and the latest spec to confirm the current support level for human-not-present (Intent Mandate) flows in the version you're targeting
 
 ## Conceptual Architecture
 
@@ -20,9 +20,9 @@ allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
 
 In a human-not-present flow, the user **provides authorization upfront and then leaves**. The Shopping Agent acts autonomously within the constraints defined in the signed Intent Mandate.
 
-### Important: Roadmap Status
+### Spec Status
 
-The AP2 V0.1 specification focuses on **human-present scenarios**. Human-not-present support is on the V1.x roadmap. Check the latest specification for current support level.
+Human-not-present is a first-class flow in current AP2 releases (added as the spec evolved beyond the initial human-present-only V0.1). Always verify the exact Intent Mandate fields and required signing semantics against the version you're targeting — fetch the live spec before implementing.
 
 ### Flow Overview
 
@@ -97,6 +97,6 @@ The Intent Mandate captures the user's actual words:
 - Implement clear logging of agent decisions for audit
 - Support the escalation from human-not-present to human-present smoothly
 - Notify the user of purchase completion (even though they're not present)
-- Check the roadmap — full human-not-present may have limited V0.1 support
+- Verify the exact Intent Mandate schema and field requirements against the spec version you're targeting before implementing
 
 Fetch the specification for the current support level and exact Intent Mandate fields before implementing autonomous flows.
