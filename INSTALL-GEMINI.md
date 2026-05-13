@@ -2,6 +2,14 @@
 
 This guide explains how to convert and install the agentic commerce plugins for [Gemini CLI](https://github.com/google-gemini/gemini-cli).
 
+> **Looking for the Gemini Extensions Gallery?** The UCP (Universal Commerce Protocol) plugin is published to the [gallery](https://geminicli.com/extensions/) as the repo's flagship extension and installable in one command:
+>
+> ```shell
+> gemini extensions install https://github.com/OrcaQubits/agentic-commerce-claude-plugins
+> ```
+>
+> The other 14 plugins install via `--path` (see [PUBLISH-GEMINI.md](./PUBLISH-GEMINI.md) for the publishing model and why only one plugin appears in the gallery).
+
 ## Prerequisites
 
 - Python 3.9+
