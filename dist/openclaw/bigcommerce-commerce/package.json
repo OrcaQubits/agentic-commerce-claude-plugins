@@ -1,0 +1,41 @@
+{
+  "name": "@ichiorca/openclaw-bigcommerce-commerce",
+  "version": "1.0.0",
+  "description": "Expert subagent and skills for BigCommerce development — Stencil themes, REST/GraphQL APIs, single-click apps, checkout SDK, payment integrations, headless with Catalyst/Next.js, multi-channel, webhooks, and Node.js/JavaScript patterns.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "clawhub-plugin",
+    "bigcommerce",
+    "ecommerce",
+    "stencil",
+    "catalyst",
+    "headless",
+    "rest-api",
+    "graphql",
+    "checkout-sdk",
+    "multi-channel",
+    "nextjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
+  },
+  "openclaw": {
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    },
+    "hostTargets": [
+      "openclaw"
+    ],
+    "manifest": "./openclaw.plugin.json"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  }
+}

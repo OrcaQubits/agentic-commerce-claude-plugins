@@ -5,7 +5,7 @@
     "url": "https://orcaqubits-ai.com"
   },
   "metadata": {
-    "description": "Agentic Commerce Claude Code Plugins — UCP, ACP, A2A, AP2, MPP, WebMCP, Magento 2, BigCommerce, Shopify, WooCommerce, Salesforce Commerce, Medusa, and Saleor",
+    "description": "Agentic Commerce Claude Code Plugins — UCP, ACP, A2A, AP2, MPP, WebMCP, NLWeb, Magento 2, BigCommerce, Shopify, WooCommerce, Salesforce Commerce, Medusa, Saleor, and Spree",
     "version": "1.0.0"
   },
   "plugins": [
@@ -134,6 +134,26 @@
       "description": "Saleor — open-source GraphQL-first headless commerce with Python/Django backend, App extensions, webhooks, Dashboard with App Bridge, Next.js storefronts, channels, typed attributes, and GraphQL/Python/Next.js patterns",
       "version": "1.0.0",
       "source": "./saleor-commerce",
+      "author": {
+        "name": "Rohit Bajaj, Julekha Khatun",
+        "url": "https://orcaqubits-ai.com"
+      }
+    },
+    {
+      "name": "nlweb-protocol",
+      "description": "NLWeb (Natural Language Web) — Microsoft's open framework (R.V. Guha) for making any site agent-accessible via Schema.org + MCP, with /ask + /mcp endpoints, mixed-mode programming, pluggable LLM and retrieval providers (Azure AI Search, Qdrant, Snowflake Cortex, Cloudflare AutoRAG, etc.), and ChatGPT Apps SDK integration",
+      "version": "1.0.0",
+      "source": "./nlweb-protocol",
+      "author": {
+        "name": "Rohit Bajaj, Julekha Khatun",
+        "url": "https://orcaqubits-ai.com"
+      }
+    },
+    {
+      "name": "spree-commerce",
+      "description": "Spree Commerce — open-source Rails e-commerce platform (BSD-3, since 2007, v5+) with consolidated `spree` umbrella gem, Tailwind/Hotwire Admin Dashboard, API v3 (flat JSON + OpenAPI 3.0) + legacy API v2, the @spree/sdk TypeScript SDK, Order/Payment/Shipment state machines, prepend-based decorators, Spree::Events bus + Webhooks 2.0, Promotions engine, Payment Sessions (Stripe/Adyen/PayPal), Multi-store + Markets + Marketplace, Next.js headless storefront, RSpec + spree_dev_tools, and PostgreSQL/Redis/Sidekiq/Docker deployment",
+      "version": "1.0.0",
+      "source": "./spree-commerce",
       "author": {
         "name": "Rohit Bajaj, Julekha Khatun",
         "url": "https://orcaqubits-ai.com"

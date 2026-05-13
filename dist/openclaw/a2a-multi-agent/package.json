@@ -1,0 +1,40 @@
+{
+  "name": "@ichiorca/openclaw-a2a-multi-agent",
+  "version": "1.0.0",
+  "description": "Expert A2A (Agent-to-Agent) protocol knowledge for building multi-agent systems — Agent Cards, task lifecycle, streaming, push notifications, authentication, and framework integrations.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "clawhub-plugin",
+    "a2a",
+    "agent-to-agent",
+    "multi-agent",
+    "google",
+    "json-rpc",
+    "agent-card",
+    "task-lifecycle",
+    "streaming",
+    "push-notifications"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
+  },
+  "openclaw": {
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    },
+    "hostTargets": [
+      "openclaw"
+    ],
+    "manifest": "./openclaw.plugin.json"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  }
+}

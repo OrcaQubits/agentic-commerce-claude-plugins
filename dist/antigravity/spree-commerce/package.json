@@ -1,0 +1,148 @@
+{
+  "name": "spree-commerce",
+  "displayName": "Spree Commerce",
+  "version": "1.0.0",
+  "description": "Spree Commerce expert for building open-source Rails e-commerce — covers the v5+ architecture (consolidated `spree` umbrella gem, Tailwind admin dashboard, API v3 flat-JSON + OpenAPI), Order/Payment/Shipment state machines, Extensions and Decorators (prepend), the Event Bus + Webhooks 2.0, Promotions engine, Payment Sessions (Stripe/Adyen/PayPal), Multi-store + Markets + Marketplace, the Next.js headless storefront, `@spree/sdk` TypeScript SDK, RSpec testing with `spree_dev_tools`, and Docker/PostgreSQL/Redis/Sidekiq deployment.",
+  "publisher": "orcaqubits-ai",
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgenticCommerce/agentic-commerce-claude-plugins"
+  },
+  "keywords": [
+    "spree",
+    "spree-commerce",
+    "ecommerce",
+    "rails",
+    "ruby",
+    "headless-commerce",
+    "open-source",
+    "postgresql",
+    "sidekiq",
+    "nextjs",
+    "tailwind",
+    "hotwire",
+    "stripe",
+    "marketplace",
+    "multi-store"
+  ],
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "skills": [
+    {
+      "name": "spree-admin-customization",
+      "description": "Customize the Spree v5 Admin Dashboard — Tailwind 4 + Hotwire/Turbo/Stimulus stack, the `Spree.admin.navigation` declarative API (v5.2+) for menu items, partial injection slots (`store_nav_partials`, `store_products_nav_partials`, `store_orders_nav_partials`, `settings_nav_partials`), the Admin SDK components + form builder, custom dashboard reports, the Page Builder for storefront editing, and theme management. Use when adding admin pages, injecting UI into existing screens, or building admin extensions.",
+      "path": ".agent/skills/spree-admin-customization/SKILL.md"
+    },
+    {
+      "name": "spree-api-v3",
+      "description": "Build with Spree's v3 APIs (v5.4+) — Store API at `/api/v3/store/*` (publishable key + per-user JWT, customer-facing) and Admin API at `/api/v3/admin/*` (per-user API keys + OAuth2 Doorkeeper, admin/operations). Covers the flat-JSON Stripe-like envelope, `?expand=` / `?include=` parameters, prefixed IDs (`prod_…`, `ord_…`), OpenAPI 3.0 spec, rate limiting, idempotency, and migration from v2 JSON:API. Use when building API clients, SDKs, or extending API endpoints in a Spree v5.4+ deployment.",
+      "path": ".agent/skills/spree-api-v3/SKILL.md"
+    },
+    {
+      "name": "spree-catalog",
+      "description": "Build and customize Spree's catalog — Products with Variants and OptionTypes/OptionValues, Taxonomies and Taxons (nested set), Properties, Images via ActiveStorage, multi-currency Prices, the v5.3+ PriceList feature for customer/segment overrides, MeiliSearch faceted search (v5.4+), product archiving/activation, CSV import/export, and SEO. Use when modeling products, customizing the catalog UI, indexing search, or importing inventory.",
+      "path": ".agent/skills/spree-catalog/SKILL.md"
+    },
+    {
+      "name": "spree-checkout",
+      "description": "Implement Spree's checkout — the Order state machine (cart → address → delivery → payment → confirm → complete), the Payment and Shipment sub-state machines, the return flow (ReturnAuthorization → CustomerReturn → Reimbursement → Refund), guest checkout, payment-step skipping for credit-covered orders, and the V3 checkout API surface. Use when building or customizing checkout flows, debugging state transitions, or wiring custom checkout steps.",
+      "path": ".agent/skills/spree-checkout/SKILL.md"
+    },
+    {
+      "name": "spree-data-model",
+      "description": "Navigate Spree's canonical data model — the Catalog (Product/Variant/OptionType/Taxon/Property/Metafield), Pricing (Price/PriceList), Order graph (Order/LineItem/Adjustment/Shipment/Payment/PaymentSession/Refund/Reimbursement), Inventory (StockLocation/StockItem/StockMovement), Shipping (ShippingMethod/Zone), Promotions, Identity (User/Role/Address/StoreCredit/GiftCard), Taxes, and the v5.4+ Markets + Store multi-region model. Use when designing a feature that touches Spree models, writing decorators, or building admin/storefront UIs.",
+      "path": ".agent/skills/spree-data-model/SKILL.md"
+    },
+    {
+      "name": "spree-deployment",
+      "description": "Deploy Spree to production — PostgreSQL + Redis + Sidekiq stack, Docker multi-arch images on GHCR, the `spree-starter` Dockerfile + Compose, Heroku/Render/Fly.io/AWS targets, env-var conventions, RAILS_MASTER_KEY, asset precompilation (Tailwind 4 + Propshaft), Action Cable, MeiliSearch indexing, S3 / ActiveStorage for media, log/observability setup, zero-downtime deploys, and migration strategy. Use when going from local dev to production, scaling Spree, or troubleshooting deploys.",
+      "path": ".agent/skills/spree-deployment/SKILL.md"
+    },
+    {
+      "name": "spree-dev-patterns",
+      "description": "Cross-cutting Spree development patterns — the customization preference hierarchy (Events > Webhooks > Dependencies > Decorators), `Spree::Dependencies` service-object swapping, the `_decorator.rb` + `prepend` + `self.prepended` idiom, idempotent subscribers and webhook receivers, multi-store scoping discipline, prefixed IDs, calculator polymorphism (shipping/promotion/tax share the base), service-object composition with `dry-monads` or simple results, why to avoid `class_eval` reopening and Deface, and Spree-on-Rails idioms (Hotwire/Turbo Stimulus, ActiveStorage, Action Cable, Sidekiq). Use when designing the architecture of a Spree extension or solving cross-cutting concerns.",
+      "path": ".agent/skills/spree-dev-patterns/SKILL.md"
+    },
+    {
+      "name": "spree-events-webhooks",
+      "description": "Build with Spree's event bus and Webhooks 2.0 — `Spree::Events` publication, `Spree::Subscriber` DSL with `subscribes_to` and `on`, wildcard matching, lifecycle events (`{model}.created/.updated/.deleted` via `publishes_lifecycle_events`), the canonical event catalog (order.*, payment.*, shipment.*, product.*), Webhooks 2.0 endpoints, HMAC-SHA256 signing (`X-Spree-Webhook-Signature`), exponential-backoff retries, and Sidekiq job orchestration. Use when wiring event-driven business logic, building webhook consumers, or replacing ActiveSupport callback chains.",
+      "path": ".agent/skills/spree-events-webhooks/SKILL.md"
+    },
+    {
+      "name": "spree-extensions",
+      "description": "Build Spree extensions as Rails engines — gem scaffolding, `bin/rails g spree:extension`, mounting routes/migrations/assets, the modern `prepend` decorator pattern (`*_decorator.rb` with `self.prepended(base)`), generators (`spree:model_decorator`, `spree:controller_decorator`), the four customization surfaces in preference order (Events > Webhooks > Dependencies > Decorators), Spree::Dependencies for swapping service objects, gem release/versioning, and the deprecated Deface engine. Use when building a reusable Spree extension or adding non-trivial customization to an app.",
+      "path": ".agent/skills/spree-extensions/SKILL.md"
+    },
+    {
+      "name": "spree-headless-storefront",
+      "description": "Build with Spree's headless Next.js storefront — the official `spree/storefront` repo (Next.js 16 App Router with Server Actions and Turbopack, React 19 Server Components, Tailwind CSS 4, TypeScript 5, `@spree/sdk`, Sentry), server-only auth (httpOnly JWT cookies + publishable key), MeiliSearch faceted catalog, one-page checkout with Apple/Google Pay/Klarna/Affirm/SEPA, multi-region market routing, GA4 + JSON-LD SEO, and Vercel/Docker deployment. Use when forking or customizing the storefront, or evaluating headless adoption.",
+      "path": ".agent/skills/spree-headless-storefront/SKILL.md"
+    },
+    {
+      "name": "spree-i18n",
+      "description": "Localize a Spree application — the `spree_i18n` gem with 60+ locale packs, the v5.4+ Translations Center for product/CMS content (CSV import/export), Rails i18n basics applied to Spree (translation files, locale switching, pluralization, interpolation), per-Market locale routing in the headless storefront, RTL languages, and translating extensions. Use when localizing a Spree store, adding a new locale, or building i18n-aware extensions.",
+      "path": ".agent/skills/spree-i18n/SKILL.md"
+    },
+    {
+      "name": "spree-legacy-api-v2",
+      "description": "Work with Spree's legacy v2 APIs — JSON:API-style Storefront API at `/api/v2/storefront/*` and Platform API at `/api/v2/platform/*`, Doorkeeper OAuth2 (password grant for storefront, client_credentials + admin scope for platform), the `spree_legacy_api_v2` gem (required in v5+ for backward compatibility), and migration patterns to API v3. Use when maintaining a v2 client during a migration window, integrating an older partner system, or deciding when to cut over to v3.",
+      "path": ".agent/skills/spree-legacy-api-v2/SKILL.md"
+    },
+    {
+      "name": "spree-multi-store",
+      "description": "Configure Spree for multi-store and multi-region commerce — one Rails install running many `Store` records, the v5.4+ `Market` model (currency + locale + payment methods + shipping per region), what's shared vs per-store (products+inventory+customers shared; orders+payments+themes per-store), the Marketplace module (Enterprise — vendors/commission/payouts via Stripe Connect), and the Multi-tenant SaaS model. Use when planning a multi-brand or multi-region Spree deployment.",
+      "path": ".agent/skills/spree-multi-store/SKILL.md"
+    },
+    {
+      "name": "spree-payments",
+      "description": "Integrate payment gateways with Spree — PaymentMethod model, the v5.4+ PaymentSession provider-agnostic checkout flow, Stripe via `spree_stripe` (Apple/Google Pay, Link, Connect for marketplaces), Adyen via `spree_adyen`, PayPal via `spree_paypal_checkout`, StoreCredit / GiftCard as payment methods, refunds, payment state machine, and authoring a custom gateway. Use when wiring a payment integration, handling webhooks from a gateway, or debugging payment-state issues.",
+      "path": ".agent/skills/spree-payments/SKILL.md"
+    },
+    {
+      "name": "spree-performance",
+      "description": "Profile and optimize a Spree application — N+1 queries with bullet/scout, database indexing strategy for Spree's polymorphic associations, Rails fragment + Russian doll caching, ActiveStorage variant pre-generation, Sidekiq queue tuning, MeiliSearch vs Postgres FTS tradeoffs, Puma worker/thread sizing, CDN strategy for catalog pages, asset precompile time, and load testing. Use when Spree is slow, the database is hot, or you're preparing for a traffic spike (Black Friday, launch).",
+      "path": ".agent/skills/spree-performance/SKILL.md"
+    },
+    {
+      "name": "spree-promotions",
+      "description": "Build and customize Spree's promotions engine — Promotion + PromotionRule + PromotionAction + CouponCode + Adjustment, the bundled rules (FirstOrder/ItemTotal/Product/Taxon/User/OneUsePerUser/Country/CustomerGroup/etc.), bundled actions (CreateAdjustment/CreateItemAdjustments/FreeShipping/CreateLineItems), Calculator classes, coupon batches with CSV export, the v5.1+ advanced rule-based engine, and authoring custom rules/actions/calculators. Use when modeling promotions, building discount UIs, or extending the promotions engine.",
+      "path": ".agent/skills/spree-promotions/SKILL.md"
+    },
+    {
+      "name": "spree-security",
+      "description": "Secure a Spree deployment — Rails credentials and env-var hygiene, Devise auth (Spree v5 ships it in-core; `spree_auth_devise` is archived), CanCanCan authorization rules, Doorkeeper OAuth2 scopes, Storefront publishable key vs admin API key, webhook HMAC verification, OWASP Top 10 for Rails (mass assignment, CSRF, SQL injection via Ransack, XSS, IDOR through prefixed IDs), PCI scope (Spree never touches raw cards thanks to gateway tokenization), and multi-store data isolation. Use when auditing a Spree app, hardening a deploy, or addressing a security incident.",
+      "path": ".agent/skills/spree-security/SKILL.md"
+    },
+    {
+      "name": "spree-setup",
+      "description": "Bootstrap a new Spree project — `create-spree-app` CLI (v5.2+), `spree-starter` Rails backend, the Next.js storefront repo, `bin/rails g spree:install`, sample data, Docker Compose, and the PostgreSQL + Redis + Sidekiq prerequisites. Use when starting a new Spree project from scratch or onboarding an existing repo.",
+      "path": ".agent/skills/spree-setup/SKILL.md"
+    },
+    {
+      "name": "spree-shipping-fulfillment",
+      "description": "Build and customize Spree's shipping and fulfillment — ShippingMethod, ShippingCategory, Zone/ZoneMember, ShippingRate, the Stock::Estimator service, StockLocation/StockItem/StockMovement, multi-shipment orders, ShippingCalculator classes (FlatRate, FlatPercentItemTotal, PerItem, FlexiRate), shipment state machine, returns (ReturnAuthorization → CustomerReturn → Reimbursement → Refund), and integrating carrier APIs (UPS, FedEx, ShipStation). Use when configuring shipping rules, building fulfillment integrations, or debugging shipping-rate calculations.",
+      "path": ".agent/skills/spree-shipping-fulfillment/SKILL.md"
+    },
+    {
+      "name": "spree-testing",
+      "description": "Test Spree applications and extensions with RSpec — `spree_dev_tools` gem (v5.2+) for factories and helpers, FactoryBot patterns (prefer `build` over `create`), Capybara feature specs, controller/request specs, testing decorators and subscribers, dummy app for extension testing, system specs for the Hotwire admin, and CI patterns. Use when writing Spree tests, setting up CI, or refactoring slow specs.",
+      "path": ".agent/skills/spree-testing/SKILL.md"
+    },
+    {
+      "name": "spree-typescript-sdk",
+      "description": "Build storefronts and integrations using `@spree/sdk` — the official TypeScript SDK for Spree's API v3 (v5.4+). Covers installation, the resource-builder pattern (`spree.products.list`, `spree.checkout.create`, etc.), Zod schema validation, server-only auth (httpOnly JWTs, never exposing API keys), error handling, typing customizations, and pinning SDK versions to backend Spree releases. Use when integrating Spree into a Next.js / Node.js / TypeScript project.",
+      "path": ".agent/skills/spree-typescript-sdk/SKILL.md"
+    },
+    {
+      "name": "spree-upgrades",
+      "description": "Upgrade a Spree application — version-to-version migration paths (v4 → v5 is a major rewrite; v5.x → v5.y are simpler), Gemfile pinning strategy, decorator brittleness across versions, deprecated gems to remove (`spree_auth_devise`, `deface`, `spree_backend`), API v2 → v3 migration via `spree_legacy_api_v2`, admin Bootstrap → Tailwind transition, the upgrade guide workflow, and rollback strategy. Use when planning a Spree upgrade or auditing technical debt blocking one.",
+      "path": ".agent/skills/spree-upgrades/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "name": "nlweb-protocol",
+  "displayName": "Nlweb Protocol",
+  "version": "1.0.0",
+  "description": "NLWeb (Natural Language Web) expert for building agent-ready websites. Covers the /ask REST endpoint, MCP server interface, schema.org grounding, data loading (RSS/JSON-LD/CSV), pluggable LLM and vector retrieval backends, the tools/prompts framework, OAuth + multitenancy, and deployment on Azure, Snowflake, Cloudflare, and Docker.",
+  "publisher": "orcaqubits-ai",
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgenticCommerce/agentic-commerce-claude-plugins"
+  },
+  "keywords": [
+    "nlweb",
+    "natural-language-web",
+    "mcp",
+    "model-context-protocol",
+    "schema-org",
+    "rag",
+    "agentic-web",
+    "microsoft",
+    "azure-ai-search",
+    "qdrant",
+    "snowflake",
+    "ask-endpoint",
+    "agent-ready",
+    "vector-search"
+  ],
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "skills": [
+    {
+      "name": "nlweb-ask-endpoint",
+      "description": "Implement and consume the NLWeb /ask REST endpoint — request shape (GET/POST, query-string and v0.55 structured body), SSE streaming response, modes (list/summarize/generate), in-stream \"message_type\" headers, error envelopes, and client-side parsing. Use when building an NLWeb server route, calling /ask from a custom agent, or debugging /ask responses.",
+      "path": ".agent/skills/nlweb-ask-endpoint/SKILL.md"
+    },
+    {
+      "name": "nlweb-auth-multitenancy",
+      "description": "Configure NLWeb authentication and multi-tenant deployments — OAuth providers (GitHub, Google, Microsoft, Facebook), session storage, the `sites:` allowlist in `config_nlweb.yaml`, conversation persistence per authenticated user, and per-tenant data isolation. Use when adding login to an NLWeb instance, hosting multiple customers on one deployment, or persisting conversation history.",
+      "path": ".agent/skills/nlweb-auth-multitenancy/SKILL.md"
+    },
+    {
+      "name": "nlweb-chatgpt-appsdk",
+      "description": "Integrate NLWeb with ChatGPT's Apps SDK — the Node.js MCP server in `openai-apps-sdk-integration/`, the `nlweb-list` tool, the React widget at `ui://widget/nlweb-list.html`, and the port-8100 AppSDK adapter that translates NLWeb's message list to OpenAI Apps SDK envelopes. Use when publishing an NLWeb site as a ChatGPT app or wiring NLWeb results into an Apps SDK widget.",
+      "path": ".agent/skills/nlweb-chatgpt-appsdk/SKILL.md"
+    },
+    {
+      "name": "nlweb-data-loading",
+      "description": "Ingest site content into NLWeb's vector store using `db_load.py` — supports RSS/Atom feeds, Schema.org JSON-LD, sitemap-driven URL lists, and CSV. Covers chunking, embedding computation, site partitioning, batch sizing, delete-and-reload, and per-backend write_endpoint targeting. Use when bootstrapping a site's index, refreshing content, or migrating between retrieval backends.",
+      "path": ".agent/skills/nlweb-data-loading/SKILL.md"
+    },
+    {
+      "name": "nlweb-deployment",
+      "description": "Deploy NLWeb to production — Azure App Service (`deploy_azure_webapp.sh` + AI Search + Azure OpenAI), Snowflake Container Services, Cloudflare Worker + AutoRAG, Docker, and self-hosted. Covers env-var conventions, `mode: production` lockdown, scaling, TLS, OAuth, and CI for data reloads. Use when going from local dev to a hosted, internet-facing NLWeb instance.",
+      "path": ".agent/skills/nlweb-deployment/SKILL.md"
+    },
+    {
+      "name": "nlweb-dev-patterns",
+      "description": "NLWeb development patterns — the mixed-mode programming philosophy, FastTrack vs Analysis parallel paths, config file precedence and the `mode: development` override trap, in-stream NLWS headers vs HTTP headers, embedding/ingest determinism, debugging the LLM-call chain, neural scorer selection (NLWebScorer ModernBERT+GAM), and the A2A / AgentFinder / DataFinder / ModelRouter subsystems. Use when designing the internal architecture of an NLWeb deployment or solving cross-cutting concerns.",
+      "path": ".agent/skills/nlweb-dev-patterns/SKILL.md"
+    },
+    {
+      "name": "nlweb-llm-providers",
+      "description": "Configure NLWeb LLM and embedding providers — OpenAI, Azure OpenAI (default), Anthropic, Google Gemini, DeepSeek on Azure, Llama on Azure, HuggingFace, Inception Labs, Snowflake Cortex, Ollama, Pi Labs. Covers `config_llm.yaml` high/low tier model selection, the ModelRouter cost/quality routing logic, `config_embedding.yaml`, and adding a custom provider. Use when picking models, tuning cost, or wiring a new LLM backend.",
+      "path": ".agent/skills/nlweb-llm-providers/SKILL.md"
+    },
+    {
+      "name": "nlweb-mcp-server",
+      "description": "Expose NLWeb as an MCP (Model Context Protocol) server — JSON-RPC 2.0 endpoint at /mcp, the `ask` / `list_sites` / `who` tools, MCP protocol version 2024-11-05, and integration with ChatGPT, Claude, Gemini, and other agent clients. Use when wiring NLWeb to an AI agent via MCP or building an MCP client that consumes an NLWeb site.",
+      "path": ".agent/skills/nlweb-mcp-server/SKILL.md"
+    },
+    {
+      "name": "nlweb-prompts-customization",
+      "description": "Customize NLWeb's LLM prompts and per-Schema.org-type behavior via `prompts.xml` and `site_types.xml` — covers the `<promptString>` template format, `<returnStruc>` JSON schemas, prompt inheritance, decontextualization/ranking/generate templates, per-site overrides, and pitfalls of editing prompts in place. Use when tuning answer quality, supporting a new domain, or localizing prompts.",
+      "path": ".agent/skills/nlweb-prompts-customization/SKILL.md"
+    },
+    {
+      "name": "nlweb-retrieval-backends",
+      "description": "Choose and configure NLWeb retrieval backends — Qdrant (local + remote), Azure AI Search, Elasticsearch, OpenSearch (with/without k-NN), Postgres pgvector, Milvus, Snowflake Cortex Search, Cloudflare AutoRAG, Shopify MCP, and Bing Web Search. Covers `config_retrieval.yaml`, the single `write_endpoint` rule, parallel read-fanout with URL dedup, and per-backend setup pages. Use when picking a retrieval store, migrating between backends, or debugging \"results are empty.\"",
+      "path": ".agent/skills/nlweb-retrieval-backends/SKILL.md"
+    },
+    {
+      "name": "nlweb-schema-org-grounding",
+      "description": "Prepare and structure site content as Schema.org JSON-LD for NLWeb ingestion — covers the supported types (Recipe, Product, Movie, Event, Article, RealEstate, Course, etc.), per-type behavior in NLWeb's tool routing, JSON-LD embedding patterns in HTML, sites.xml registration, and how the `schema_object` flows through ranking back to agent results. Use when authoring or auditing the structured data on a site that will be exposed via NLWeb.",
+      "path": ".agent/skills/nlweb-schema-org-grounding/SKILL.md"
+    },
+    {
+      "name": "nlweb-setup",
+      "description": "Bootstrap a local NLWeb development environment from scratch — clone the repo, configure .env, install Python deps via `nlweb init-python`, run `nlweb init` for interactive LLM/retrieval selection, load sample Schema.org data, and verify with `nlweb check`. Use when starting a new NLWeb deployment from zero.",
+      "path": ".agent/skills/nlweb-setup/SKILL.md"
+    },
+    {
+      "name": "nlweb-tools-framework",
+      "description": "Design and implement NLWeb tools — the per-Schema.org-type handlers that turn a query into a specialized response (search, item_details, compare_items, ensemble, recipe_substitution, accompaniment, conversation_search, etc.). Covers `tools.xml`, the ToolSelector router, builtin handlers in `methods/`, writing a custom tool with a `<returnStruc>` contract, and disabling tool selection for raw retrieval. Use when extending NLWeb beyond the default query → results flow.",
+      "path": ".agent/skills/nlweb-tools-framework/SKILL.md"
+    }
+  ]
+}

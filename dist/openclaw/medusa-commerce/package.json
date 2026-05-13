@@ -1,0 +1,44 @@
+{
+  "name": "@ichiorca/openclaw-medusa-commerce",
+  "version": "1.0.0",
+  "description": "Expert subagent and skills for Medusa v2 development — custom modules with DML data models, workflows with compensation, API routes, subscribers, admin dashboard extensions, Next.js storefronts, payment and fulfillment providers, and TypeScript/Node.js patterns.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "clawhub-plugin",
+    "medusa",
+    "medusajs",
+    "headless-commerce",
+    "ecommerce",
+    "nodejs",
+    "typescript",
+    "postgresql",
+    "nextjs",
+    "mikroorm",
+    "rest-api",
+    "modules",
+    "workflows",
+    "open-source"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
+  },
+  "openclaw": {
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    },
+    "hostTargets": [
+      "openclaw"
+    ],
+    "manifest": "./openclaw.plugin.json"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  }
+}

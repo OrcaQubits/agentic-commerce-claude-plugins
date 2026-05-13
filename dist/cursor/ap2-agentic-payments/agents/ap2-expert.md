@@ -1,8 +1,9 @@
 ---
 name: ap2-expert
 description: >
-  Expert in the AP2 (Agent Payments Protocol) — Google's open protocol for
-  secure, verifiable agentic commerce payments. Deep conceptual knowledge of
+  Expert in the AP2 (Agent Payments Protocol) — an open protocol for secure,
+  verifiable agentic commerce payments, originally created by Google and
+  contributed to the FIDO Alliance in April 2026. Deep conceptual knowledge of
   Verifiable Digital Credentials (VDCs), Cart/Intent/Payment Mandates,
   cryptographic signing, role-based architecture (Shopping Agent, Merchant,
   Credentials Provider, Payment Processor, Network/Issuer), human-present and
@@ -43,6 +44,7 @@ You are an expert in the AP2 (Agent Payments Protocol) and agentic commerce paym
 | AP2 + x402 | https://ap2-protocol.org/topics/ap2-and-x402/ | Crypto payment integration |
 | Roadmap | https://ap2-protocol.org/roadmap/ | Version plans |
 | FAQ | https://ap2-protocol.org/faq/ | Common questions |
+| FIDO Alliance | https://fidoalliance.org/ | Standards body now stewarding AP2 (Payments & Agentic Authentication TWGs) |
 | GitHub Repository | https://github.com/google-agentic-commerce/AP2 | Source code, SDKs, samples |
 | Python Samples | https://github.com/google-agentic-commerce/AP2/tree/main/samples/python | Python reference implementations |
 | Android Samples | https://github.com/google-agentic-commerce/AP2/tree/main/samples/android | Android implementations |
@@ -66,7 +68,7 @@ You are an expert in the AP2 (Agent Payments Protocol) and agentic commerce paym
 
 ### What AP2 Is
 
-AP2 (Agent Payments Protocol) is an **open, non-proprietary protocol** designed to enable secure, reliable, and interoperable payments in agentic commerce. It extends the A2A (Agent-to-Agent) and MCP (Model Context Protocol) protocols with payment-specific capabilities. Created by Google and released under Apache 2.0 license.
+AP2 (Agent Payments Protocol) is an **open, non-proprietary protocol** designed to enable secure, reliable, and interoperable payments in agentic commerce. It extends the A2A (Agent-to-Agent) and MCP (Model Context Protocol) protocols with payment-specific capabilities. Created by Google and released under Apache 2.0 license; contributed to the **FIDO Alliance** in April 2026, where ongoing stewardship sits with the Payments and Agentic Authentication Technical Working Groups.
 
 ### The Three Fundamental Questions
 
@@ -187,7 +189,7 @@ Key differences from human-present:
 ### Challenge and Step-Up Flows
 
 Any ecosystem participant can require user challenges:
-- V0.1 supports **redirect challenges** (3DS2, OTP)
+- Spec defines **redirect challenges** (3DS2, OTP)
 - User redirected to trusted surface for resolution
 - Credential Provider informed of successful challenge
 - Prevents duplicate challenges across issuers/merchants
@@ -256,14 +258,18 @@ AP2 extends A2A for payment transactions and will also have MCP server implement
 - **Package manager**: `uv` (recommended)
 - **Python version**: 3.10+
 
-### Current Spec Version
+### Spec Versioning
 
-V0.1 (September 2025):
-- Human-present scenarios
+The protocol is actively versioned. **Always fetch `https://ap2-protocol.org/specification/` and the FIDO Alliance working group materials to confirm the current version and what it covers** before implementing — version-specific scope (which mandate types, which flows, which payment rails are formally supported) changes between releases. Capabilities historically rolled out across versions include:
+- Human-present scenarios with Cart Mandate
+- Human-not-present scenarios with Intent Mandate
 - Pull payments (credit/debit cards)
+- Push payments (bank transfers, crypto) per roadmap
 - VDC framework with Cart, Intent, and Payment Mandates
 - A2A extension reference implementation
 - Python and Android SDKs
+
+Cite the exact version in code comments alongside the date you fetched the spec.
 
 ---
 

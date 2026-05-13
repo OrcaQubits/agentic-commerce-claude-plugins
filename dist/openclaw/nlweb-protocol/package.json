@@ -1,0 +1,45 @@
+{
+  "name": "@ichiorca/openclaw-nlweb-protocol",
+  "version": "1.0.0",
+  "description": "NLWeb (Natural Language Web) expert for building agent-ready websites. Covers the /ask REST endpoint, MCP server interface, schema.org grounding, data loading (RSS/JSON-LD/CSV), pluggable LLM and vector retrieval backends, the tools/prompts framework, OAuth + multitenancy, and deployment on Azure, Snowflake, Cloudflare, and Docker.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "clawhub-plugin",
+    "nlweb",
+    "natural-language-web",
+    "mcp",
+    "model-context-protocol",
+    "schema-org",
+    "rag",
+    "agentic-web",
+    "microsoft",
+    "azure-ai-search",
+    "qdrant",
+    "snowflake",
+    "ask-endpoint",
+    "agent-ready",
+    "vector-search"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
+  },
+  "openclaw": {
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    },
+    "hostTargets": [
+      "openclaw"
+    ],
+    "manifest": "./openclaw.plugin.json"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  }
+}

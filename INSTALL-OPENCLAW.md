@@ -192,6 +192,21 @@ Then verify with:
 python scripts/validate.py
 ```
 
+## Publishing to ClawHub
+
+Each plugin's `dist/openclaw/` output is **publish-ready** for the [ClawHub](https://docs.openclaw.ai/clawhub) marketplace — the converter writes a `package.json` with the required `openclaw.compat.pluginApi` + `openclaw.build.openclawVersion` fields, plus a `.clawhubignore`.
+
+To push all plugins to ClawHub in one shot:
+
+```shell
+npm i -g clawhub
+clawhub login
+python scripts/publish-clawhub.py --dry-run    # preview
+python scripts/publish-clawhub.py              # publish for real
+```
+
+See [PUBLISH-CLAWHUB.md](./PUBLISH-CLAWHUB.md) for the full publishing workflow, env-var overrides (`CLAWHUB_SCOPE`, `CLAWHUB_PLUGIN_API`, etc.), per-plugin / per-skill publish modes, and troubleshooting.
+
 ## Topics
 
 `openclaw` `clawhub` `openclaw-plugin` `openclaw-skills` `agentic-commerce` `ai-agents` `ai-shopping` `ai-checkout` `ai-payments` `mcp` `model-context-protocol` `a2a-protocol` `ucp` `universal-commerce-protocol` `acp` `ap2` `stripe-mpp` `webmcp` `magento2` `bigcommerce` `woocommerce` `shopify` `shopify-hydrogen` `shopify-liquid` `shopify-functions` `salesforce-commerce` `sfcc` `commerce-cloud` `b2c-commerce` `b2b-commerce` `sfra` `scapi` `pwa-kit` `apex-commerce` `lwc-commerce` `einstein-ai` `ecommerce` `headless-commerce` `multi-agent` `llm-tools` `ai-commerce` `multi-platform` `cross-platform-plugins` `ai-dev-tools`

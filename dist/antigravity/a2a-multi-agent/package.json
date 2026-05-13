@@ -55,7 +55,7 @@
     },
     {
       "name": "a2a-framework-integration",
-      "description": "Integrate A2A with agent frameworks — Google ADK, LangGraph, CrewAI, AutoGen, and AWS Bedrock AgentCore. Use when connecting framework-built agents to the A2A protocol for inter-agent communication.",
+      "description": "Integrate A2A with agent frameworks — Google ADK, LangGraph, CrewAI, AutoGen, AWS Bedrock AgentCore, and Microsoft Azure AI Foundry. Use when connecting framework-built agents to the A2A protocol for inter-agent communication.",
       "path": ".agent/skills/a2a-framework-integration/SKILL.md"
     },
     {

@@ -1,0 +1,41 @@
+{
+  "name": "@ichiorca/openclaw-shopify-commerce",
+  "version": "1.0.0",
+  "description": "Expert subagent and skills for Shopify development — GraphQL Admin and Storefront APIs, Liquid templating, Online Store 2.0 themes, Hydrogen/Remix headless storefronts, Shopify Functions, checkout UI extensions, Polaris components, app development with App Bridge, webhooks, and JavaScript/TypeScript/React patterns.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "clawhub-plugin",
+    "shopify",
+    "ecommerce",
+    "graphql",
+    "liquid",
+    "hydrogen",
+    "remix",
+    "polaris",
+    "shopify-functions",
+    "headless",
+    "checkout-extensions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
+  },
+  "openclaw": {
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    },
+    "hostTargets": [
+      "openclaw"
+    ],
+    "manifest": "./openclaw.plugin.json"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  }
+}

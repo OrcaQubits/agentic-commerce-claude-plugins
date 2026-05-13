@@ -1,0 +1,46 @@
+{
+  "name": "@ichiorca/openclaw-spree-commerce",
+  "version": "1.0.0",
+  "description": "Spree Commerce expert for building open-source Rails e-commerce — covers the v5+ architecture (consolidated `spree` umbrella gem, Tailwind admin dashboard, API v3 flat-JSON + OpenAPI), Order/Payment/Shipment state machines, Extensions and Decorators (prepend), the Event Bus + Webhooks 2.0, Promotions engine, Payment Sessions (Stripe/Adyen/PayPal), Multi-store + Markets + Marketplace, the Next.js headless storefront, `@spree/sdk` TypeScript SDK, RSpec testing with `spree_dev_tools`, and Docker/PostgreSQL/Redis/Sidekiq deployment.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "clawhub-plugin",
+    "spree",
+    "spree-commerce",
+    "ecommerce",
+    "rails",
+    "ruby",
+    "headless-commerce",
+    "open-source",
+    "postgresql",
+    "sidekiq",
+    "nextjs",
+    "tailwind",
+    "hotwire",
+    "stripe",
+    "marketplace",
+    "multi-store"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
+  },
+  "openclaw": {
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    },
+    "hostTargets": [
+      "openclaw"
+    ],
+    "manifest": "./openclaw.plugin.json"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  }
+}

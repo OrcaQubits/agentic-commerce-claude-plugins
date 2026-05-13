@@ -1,0 +1,42 @@
+{
+  "name": "@ichiorca/openclaw-ucp-agentic-commerce",
+  "version": "1.0.0",
+  "description": "Universal Commerce Protocol (UCP) expert for building agentic commerce implementations. Covers the full protocol — discovery, checkout, orders, payments, fulfillment, discounts, identity linking, AP2 mandates — across REST, MCP, A2A, and Embedded bindings.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "clawhub-plugin",
+    "ucp",
+    "universal-commerce-protocol",
+    "agentic-commerce",
+    "checkout",
+    "mcp",
+    "a2a",
+    "ap2",
+    "google",
+    "shopify",
+    "payments",
+    "ecommerce"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-claude-plugins"
+  },
+  "openclaw": {
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.3.24-beta.2"
+    },
+    "hostTargets": [
+      "openclaw"
+    ],
+    "manifest": "./openclaw.plugin.json"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun",
+    "url": "https://orcaqubits-ai.com"
+  }
+}
