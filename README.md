@@ -1,6 +1,14 @@
 # Agentic Commerce Skills & Plugins — Claude, Gemini, Codex, Cursor, Antigravity, OpenClaw
 
+[![skills.sh](https://skills.sh/b/orcaqubits/agentic-commerce-skills-plugins)](https://skills.sh/orcaqubits/agentic-commerce-skills-plugins)
+
 This repository contains agentic commerce plugins and skills for **AI coding assistants** — the emerging ecosystem where AI agents negotiate, purchase, and fulfill transactions on behalf of users. These plugins provide expert subagents, skills, and lifecycle hooks for the major protocols and platforms shaping this space.
+
+**One-line install via skills.sh** (Vercel's universal agent-skills CLI, supports 56+ agents including Claude Code, Cursor, Codex, Gemini, OpenClaw, Antigravity):
+
+```bash
+npx skills add orcaqubits/agentic-commerce-skills-plugins
+```
 
 Built natively for Claude Code, with cross-platform conversion support for Gemini CLI, OpenAI Codex CLI, Cursor, Antigravity/Windsurf, and OpenClaw. Each plugin provides deep conceptual knowledge of a commerce protocol or platform, while always fetching the latest specification and SDK documentation before writing implementation code.
 
