@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Expert subagent and skills for BigCommerce development — Stencil themes, REST/GraphQL APIs, single-click apps, checkout SDK, payment integrations, headless with Catalyst/Next.js, multi-channel, webhooks, and Node.js/JavaScript patterns.",
   "author": {
-    "name": "Rohit Bajaj, Julekha Khatun",
-    "url": "https://orcaqubits-ai.com"
+    "name": "Rohit Bajaj, Julekha Khatun"
   },
+  "homepage": "https://orcaqubits-ai.com",
   "keywords": [
     "bigcommerce",
     "ecommerce",
@@ -18,5 +18,6 @@
     "multi-channel",
     "nextjs"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json"
 }

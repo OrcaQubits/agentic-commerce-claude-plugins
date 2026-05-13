@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Expert subagent and skills for Medusa v2 development — custom modules with DML data models, workflows with compensation, API routes, subscribers, admin dashboard extensions, Next.js storefronts, payment and fulfillment providers, and TypeScript/Node.js patterns.",
   "author": {
-    "name": "Rohit Bajaj, Julekha Khatun",
-    "url": "https://orcaqubits-ai.com"
+    "name": "Rohit Bajaj, Julekha Khatun"
   },
+  "homepage": "https://orcaqubits-ai.com",
   "keywords": [
     "medusa",
     "medusajs",
@@ -21,5 +21,6 @@
     "workflows",
     "open-source"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json"
 }

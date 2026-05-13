@@ -46,9 +46,16 @@ CURSOR_EVENT_MAP = {
 def generate_cursor_manifest(plugin_json_path: Path) -> dict:
     """Generate a .cursor-plugin/plugin.json dict from a Claude plugin.json.
 
-    Unlike Gemini (which strips author/keywords/license), Cursor keeps them.
+    Conforms to Cursor's plugin schema
+    (https://github.com/cursor/plugins/blob/main/schemas/plugin.schema.json) —
+    ``additionalProperties: false``, so we must only emit keys the schema
+    accepts.  The ``author`` object is ``{name, email}``; the Claude source's
+    ``author.url`` is moved to top-level ``homepage`` (which Cursor's schema
+    accepts).
+
     Components are auto-discovered from default directories (rules/, skills/,
-    agents/, hooks/) so explicit path fields are not needed.
+    agents/, hooks/, commands/, mcp.json) so explicit path fields are not
+    needed unless a non-default location is used.
     """
     with open(plugin_json_path, encoding="utf-8") as f:
         data = json.load(f)
@@ -59,16 +66,32 @@ def generate_cursor_manifest(plugin_json_path: Path) -> dict:
         "description": data.get("description", ""),
     }
 
-    # Cursor keeps author, keywords, license (unlike Gemini which strips them)
-    if "author" in data:
-        manifest["author"] = data["author"]
+    # author: keep only schema-allowed keys ({name, email})
+    src_author = data.get("author")
+    if isinstance(src_author, dict):
+        cleaned_author: dict = {}
+        if src_author.get("name"):
+            cleaned_author["name"] = src_author["name"]
+        if src_author.get("email"):
+            cleaned_author["email"] = src_author["email"]
+        if cleaned_author:
+            manifest["author"] = cleaned_author
+        # Move author.url to top-level `homepage` (which IS in the Cursor schema)
+        if src_author.get("url"):
+            manifest["homepage"] = src_author["url"]
+    elif isinstance(src_author, str):
+        manifest["author"] = {"name": src_author}
+
     if "keywords" in data:
         manifest["keywords"] = data["keywords"]
     if "license" in data:
         manifest["license"] = data["license"]
 
-    # Note: Component paths (rules/, skills/, agents/, hooks/) are NOT listed
-    # here because Cursor auto-discovers from these default directories.
+    # Explicit hooks reference — Cursor's schema accepts a path string for
+    # ``hooks``.  Only emit if the source plugin actually ships hooks/hooks.json.
+    plugin_dir = plugin_json_path.parent.parent
+    if (plugin_dir / "hooks" / "hooks.json").is_file():
+        manifest["hooks"] = "./hooks/hooks.json"
 
     return manifest
 

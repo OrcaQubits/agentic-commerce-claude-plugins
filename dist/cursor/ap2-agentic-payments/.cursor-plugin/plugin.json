@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Expert AP2 (Agent Payments Protocol) knowledge for building agentic commerce payment modules — Verifiable Digital Credentials, mandates, cryptographic signing, transaction flows, and multi-agent payment orchestration.",
   "author": {
-    "name": "Rohit Bajaj, Julekha Khatun",
-    "url": "https://orcaqubits-ai.com"
+    "name": "Rohit Bajaj, Julekha Khatun"
   },
+  "homepage": "https://orcaqubits-ai.com",
   "keywords": [
     "ap2",
     "agent-payments",
@@ -17,5 +17,6 @@
     "payment",
     "cryptographic-signing"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json"
 }
