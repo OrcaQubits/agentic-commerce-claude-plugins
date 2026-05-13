@@ -1,0 +1,38 @@
+{
+  "name": "stripe-mpp",
+  "version": "1.0.0",
+  "description": "Expert subagent and skills for implementing the Machine Payments Protocol (MPP) — the open standard co-authored by Stripe and Tempo Labs for HTTP 402-based machine-to-machine payments, enabling AI agents to pay for API calls, data, and services autonomously.",
+  "license": "MIT",
+  "keywords": [
+    "mpp",
+    "machine-payments",
+    "stripe",
+    "tempo",
+    "http-402",
+    "agent-payments",
+    "micropayments",
+    "mppx",
+    "shared-payment-token",
+    "service-discovery",
+    "pay-per-call",
+    "streaming-payments",
+    "agentic-commerce"
+  ],
+  "interface": {
+    "displayName": "Stripe Mpp",
+    "shortDescription": "Expert subagent and skills for implementing the Machine Payments Protocol (MPP) — the open standard co-authored by Strip",
+    "longDescription": "Expert subagent and skills for implementing the Machine Payments Protocol (MPP) — the open standard co-authored by Stripe and Tempo Labs for HTTP 402-based machine-to-machine payments, enabling AI agents to pay for API calls, data, and services autonomously.",
+    "category": "Commerce",
+    "websiteURL": "https://orcaqubits-ai.com",
+    "developerName": "Rohit Bajaj, Julekha Khatun"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun"
+  },
+  "homepage": "https://orcaqubits-ai.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins"
+  },
+  "hooks": "./hooks/hooks.json"
+}

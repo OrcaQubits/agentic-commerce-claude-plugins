@@ -1,0 +1,34 @@
+{
+  "name": "a2a-multi-agent",
+  "version": "1.0.0",
+  "description": "Expert A2A (Agent-to-Agent) protocol knowledge for building multi-agent systems — Agent Cards, task lifecycle, streaming, push notifications, authentication, and framework integrations.",
+  "license": "MIT",
+  "keywords": [
+    "a2a",
+    "agent-to-agent",
+    "multi-agent",
+    "google",
+    "json-rpc",
+    "agent-card",
+    "task-lifecycle",
+    "streaming",
+    "push-notifications"
+  ],
+  "interface": {
+    "displayName": "A2A Multi Agent",
+    "shortDescription": "Expert A2A (Agent-to-Agent) protocol knowledge for building multi-agent systems — Agent Cards, task lifecycle, streaming",
+    "longDescription": "Expert A2A (Agent-to-Agent) protocol knowledge for building multi-agent systems — Agent Cards, task lifecycle, streaming, push notifications, authentication, and framework integrations.",
+    "category": "Commerce",
+    "websiteURL": "https://orcaqubits-ai.com",
+    "developerName": "Rohit Bajaj, Julekha Khatun"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun"
+  },
+  "homepage": "https://orcaqubits-ai.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins"
+  },
+  "hooks": "./hooks/hooks.json"
+}

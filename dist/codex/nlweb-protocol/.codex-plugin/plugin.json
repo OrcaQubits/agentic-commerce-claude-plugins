@@ -1,0 +1,39 @@
+{
+  "name": "nlweb-protocol",
+  "version": "1.0.0",
+  "description": "NLWeb (Natural Language Web) expert for building agent-ready websites. Covers the /ask REST endpoint, MCP server interface, schema.org grounding, data loading (RSS/JSON-LD/CSV), pluggable LLM and vector retrieval backends, the tools/prompts framework, OAuth + multitenancy, and deployment on Azure, Snowflake, Cloudflare, and Docker.",
+  "license": "MIT",
+  "keywords": [
+    "nlweb",
+    "natural-language-web",
+    "mcp",
+    "model-context-protocol",
+    "schema-org",
+    "rag",
+    "agentic-web",
+    "microsoft",
+    "azure-ai-search",
+    "qdrant",
+    "snowflake",
+    "ask-endpoint",
+    "agent-ready",
+    "vector-search"
+  ],
+  "interface": {
+    "displayName": "Nlweb Protocol",
+    "shortDescription": "NLWeb (Natural Language Web) expert for building agent-ready websites",
+    "longDescription": "NLWeb (Natural Language Web) expert for building agent-ready websites. Covers the /ask REST endpoint, MCP server interface, schema.org grounding, data loading (RSS/JSON-LD/CSV), pluggable LLM and vector retrieval backends, the tools/prompts framework, OAuth + multitenancy, and deployment on Azure, Snowflake, Cloudflare, and Docker.",
+    "category": "Commerce",
+    "websiteURL": "https://orcaqubits-ai.com",
+    "developerName": "Rohit Bajaj, Julekha Khatun"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun"
+  },
+  "homepage": "https://orcaqubits-ai.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins"
+  },
+  "hooks": "./hooks/hooks.json"
+}

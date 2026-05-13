@@ -1,0 +1,204 @@
+{
+  "name": "agentic-commerce",
+  "interface": {
+    "displayName": "Agentic Commerce Skills & Plugins",
+    "description": "Expert agents, skills, and plugin bundles for the agentic commerce ecosystem: UCP, ACP, AP2, A2A, Stripe MPP, WebMCP, NLWeb, Magento 2, BigCommerce, Shopify, WooCommerce, Salesforce Commerce, Medusa, Saleor, Spree"
+  },
+  "plugins": [
+    {
+      "name": "ucp-agentic-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/ucp-agentic-commerce"
+      },
+      "description": "Universal Commerce Protocol (UCP) â€” Google/Shopify agentic commerce across REST, MCP, A2A, and Embedded bindings",
+      "category": "Agentic Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "acp-agentic-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/acp-agentic-commerce"
+      },
+      "description": "Agentic Commerce Protocol (ACP) â€” OpenAI/Stripe open standard for AI-agent-mediated commerce",
+      "category": "Agentic Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "a2a-multi-agent",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/a2a-multi-agent"
+      },
+      "description": "A2A (Agent-to-Agent) protocol â€” Google multi-agent communication with Agent Cards, tasks, and streaming",
+      "category": "Multi-Agent",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "ap2-agentic-payments",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/ap2-agentic-payments"
+      },
+      "description": "AP2 (Agent Payments Protocol) â€” Google agentic payment mandates, VDCs, and cryptographic signing",
+      "category": "Payments",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "magento2-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/magento2-commerce"
+      },
+      "description": "Magento 2 Open Source â€” module development, DI, plugins, EAV, APIs, checkout, catalog, and PHP 8.x",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "webmcp-browser-agents",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/webmcp-browser-agents"
+      },
+      "description": "WebMCP (Web Model Context Protocol) â€” browser-native API for agent-ready websites, structured tool registration, declarative forms, and human-in-the-loop commerce",
+      "category": "Agentic Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "bigcommerce-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/bigcommerce-commerce"
+      },
+      "description": "BigCommerce â€” Stencil themes, REST/GraphQL APIs, single-click apps, checkout SDK, headless with Catalyst/Next.js, and Node.js patterns",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "shopify-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/shopify-commerce"
+      },
+      "description": "Shopify â€” GraphQL Admin/Storefront APIs, Liquid, Online Store 2.0 themes, Hydrogen/Remix, Shopify Functions, checkout extensions, Polaris, and JS/TS/React patterns",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "woocommerce-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/woocommerce-commerce"
+      },
+      "description": "WooCommerce â€” plugin/extension architecture, hooks/filters, REST API, checkout blocks, payment gateways, HPOS, and PHP 8.x patterns",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "salesforce-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/salesforce-commerce"
+      },
+      "description": "Salesforce Commerce â€” B2C Commerce Cloud (SFRA, ISML, SCAPI, PWA Kit) and B2B/D2C Commerce on Lightning (Apex, LWC, Experience Builder), Einstein AI, and JS/TS/React patterns",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "stripe-mpp",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/stripe-mpp"
+      },
+      "description": "Machine Payments Protocol (MPP) â€” Stripe/Tempo HTTP 402 machine-to-machine payments, charge and session intents, mppx SDK, Tempo blockchain, SPTs, and service discovery",
+      "category": "Payments",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "medusa-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/medusa-commerce"
+      },
+      "description": "Medusa v2 â€” open-source headless commerce with custom modules, DML data models, workflows, API routes, subscribers, admin extensions, Next.js storefronts, and TypeScript/Node.js patterns",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "saleor-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/saleor-commerce"
+      },
+      "description": "Saleor â€” open-source GraphQL-first headless commerce with Python/Django backend, App extensions, webhooks, Dashboard with App Bridge, Next.js storefronts, channels, typed attributes, and GraphQL/Python/Next.js patterns",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "nlweb-protocol",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/nlweb-protocol"
+      },
+      "description": "NLWeb (Natural Language Web) â€” Microsoft's open framework (R.V. Guha) for making any site agent-accessible via Schema.org + MCP, with /ask + /mcp endpoints, mixed-mode programming, pluggable LLM and retrieval providers (Azure AI Search, Qdrant, Snowflake Cortex, Cloudflare AutoRAG, etc.), and ChatGPT Apps SDK integration",
+      "category": "AI Web",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
+      "name": "spree-commerce",
+      "source": {
+        "source": "local",
+        "path": "./dist/codex/spree-commerce"
+      },
+      "description": "Spree Commerce â€” open-source Rails e-commerce platform (BSD-3, since 2007, v5+) with consolidated `spree` umbrella gem, Tailwind/Hotwire Admin Dashboard, API v3 (flat JSON + OpenAPI 3.0) + legacy API v2, the @spree/sdk TypeScript SDK, Order/Payment/Shipment state machines, prepend-based decorators, Spree::Events bus + Webhooks 2.0, Promotions engine, Payment Sessions (Stripe/Adyen/PayPal), Multi-store + Markets + Marketplace, Next.js headless storefront, RSpec + spree_dev_tools, and PostgreSQL/Redis/Sidekiq/Docker deployment",
+      "category": "Commerce",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    }
+  ]
+}

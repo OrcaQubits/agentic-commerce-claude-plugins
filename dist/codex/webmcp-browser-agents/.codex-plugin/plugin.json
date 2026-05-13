@@ -1,0 +1,37 @@
+{
+  "name": "webmcp-browser-agents",
+  "version": "1.0.0",
+  "description": "WebMCP (Web Model Context Protocol) — browser-native API for agent-ready websites, enabling structured tool registration, declarative forms, human-in-the-loop commerce, and MCP-B polyfill integration.",
+  "license": "MIT",
+  "keywords": [
+    "webmcp",
+    "web-model-context-protocol",
+    "browser-agents",
+    "navigator-modelcontext",
+    "agentic-commerce",
+    "register-tool",
+    "declarative-forms",
+    "mcp-b",
+    "polyfill",
+    "human-in-the-loop",
+    "w3c",
+    "chrome"
+  ],
+  "interface": {
+    "displayName": "Webmcp Browser Agents",
+    "shortDescription": "WebMCP (Web Model Context Protocol) — browser-native API for agent-ready websites, enabling structured tool registration",
+    "longDescription": "WebMCP (Web Model Context Protocol) — browser-native API for agent-ready websites, enabling structured tool registration, declarative forms, human-in-the-loop commerce, and MCP-B polyfill integration.",
+    "category": "Commerce",
+    "websiteURL": "https://orcaqubits-ai.com",
+    "developerName": "Rohit Bajaj, Julekha Khatun"
+  },
+  "author": {
+    "name": "Rohit Bajaj, Julekha Khatun"
+  },
+  "homepage": "https://orcaqubits-ai.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins"
+  },
+  "hooks": "./hooks/hooks.json"
+}

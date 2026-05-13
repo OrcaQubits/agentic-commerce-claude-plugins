@@ -214,14 +214,13 @@ def convert_plugin_codex(
 ) -> list[str]:
     """Convert a single plugin for OpenAI Codex CLI.
 
-    Codex CLI layout:
+    Codex CLI plugin-bundle layout (per developers.openai.com/codex/plugins/build):
+      .codex-plugin/plugin.json        # Plugin manifest (required for marketplace)
       AGENTS.md                        # Agent expertise as context
-      .codex/agents/<name>.toml        # Subagent definitions
-      .agents/skills/<skill>/SKILL.md  # Skills (stripped frontmatter)
+      agents/<name>.toml               # Subagent definitions (bundle source)
+      skills/<skill>/SKILL.md          # Skills (bundle source; stripped frontmatter)
+      hooks/hooks.json                 # Plugin-bundled hooks (Codex v0.128+)
       scripts/*.py                     # Hook scripts as standalone utilities
-
-    Note: No config.toml is generated.  Codex CLI does not support per-tool
-    lifecycle hooks.  Hook scripts are copied as standalone utilities.
 
     Returns a list of file paths (relative to output_root) that were or
     would be written.
@@ -239,19 +238,18 @@ def convert_plugin_codex(
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(agents_md, encoding="utf-8", newline="\n")
 
-    # 2. .codex/agents/*.toml + scripts/*.py (no config.toml — no hooks system)
+    # 2. .codex-plugin/plugin.json + agents/*.toml + scripts/*.py
     if not dry_run:
         written = convert_all_codex(plugin_dir, out_dir, name)
         files.extend(str(p.relative_to(output_root)) for p in written)
     else:
+        files.append(str((out_dir / ".codex-plugin" / "plugin.json").relative_to(output_root)))
         agents_src = plugin_dir / "agents"
         if agents_src.is_dir():
             for agent_md in sorted(agents_src.glob("*.md")):
                 files.append(
                     str(
-                        (out_dir / ".codex" / "agents" / f"{agent_md.stem}.toml").relative_to(
-                            output_root
-                        )
+                        (out_dir / "agents" / f"{agent_md.stem}.toml").relative_to(output_root)
                     )
                 )
         scripts_dir = plugin_dir / "hooks" / "scripts"
@@ -261,7 +259,7 @@ def convert_plugin_codex(
                     str((out_dir / "scripts" / py.name).relative_to(output_root))
                 )
 
-    # 3. Skills (into .agents/skills/)
+    # 3. Skills (into plugin-root skills/)
     if not dry_run:
         written = convert_all_skills(plugin_dir, out_dir, "codex")
         files.extend(str(p.relative_to(output_root)) for p in written)
@@ -274,7 +272,6 @@ def convert_plugin_codex(
                         str(
                             (
                                 out_dir
-                                / ".agents"
                                 / "skills"
                                 / skill_dir.name
                                 / "SKILL.md"

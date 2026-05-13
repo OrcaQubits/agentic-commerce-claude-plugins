@@ -51,7 +51,8 @@ def convert_all_skills(
 
     For Gemini:       output_dir/skills/<skill>/SKILL.md
     For Antigravity:  output_dir/.agent/skills/<skill>/SKILL.md
-    For Codex:        output_dir/.agents/skills/<skill>/SKILL.md
+    For Codex:        output_dir/skills/<skill>/SKILL.md  (plugin-bundle source layout — Codex's
+                      runtime moves it to .agents/skills/ when installing the plugin)
     For OpenClaw:     output_dir/skills/<skill>/SKILL.md
 
     Returns a list of written file paths.
@@ -60,11 +61,10 @@ def convert_all_skills(
     if not skills_src.is_dir():
         return []
 
-    if platform == "codex":
-        skills_dest = output_dir / ".agents" / "skills"
-    elif platform == "antigravity":
+    if platform == "antigravity":
         skills_dest = output_dir / ".agent" / "skills"
     else:
+        # Gemini, Codex, OpenClaw all use plugin-root `skills/` as the bundle source
         skills_dest = output_dir / "skills"
 
     written: list[Path] = []
