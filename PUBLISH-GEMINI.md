@@ -28,7 +28,7 @@ This repo is a monorepo of **15 commerce/agentic plugins**, but the gallery only
 So at the **repo root** you'll find UCP's extension files, copied from `dist/gemini/ucp-agentic-commerce/`:
 
 ```
-agentic-commerce-claude-plugins/
+agentic-commerce-skills-plugins/
 ├── gemini-extension.json     # UCP manifest — what the gallery indexes
 ├── GEMINI.md                 # UCP agent expertise — auto-loaded on install
 ├── hooks.json                # UCP's PostToolUse secret-detection hook
@@ -46,7 +46,7 @@ The other 14 plugins remain **fully installable via path** (see below) and conti
 The flagship extension is discoverable in the gallery:
 
 ```bash
-gemini extensions install https://github.com/OrcaQubits/agentic-commerce-claude-plugins
+gemini extensions install https://github.com/OrcaQubits/agentic-commerce-skills-plugins
 ```
 
 This installs UCP's manifest + GEMINI.md + 15 UCP skills + secret-detection hook.
@@ -56,8 +56,8 @@ This installs UCP's manifest + GEMINI.md + 15 UCP skills + secret-detection hook
 For ACP, A2A, AP2, WebMCP, NLWeb, Stripe MPP, Magento, Shopify, Saleor, Medusa, BigCommerce, WooCommerce, Salesforce Commerce, or Spree:
 
 ```bash
-git clone https://github.com/OrcaQubits/agentic-commerce-claude-plugins
-cd agentic-commerce-claude-plugins
+git clone https://github.com/OrcaQubits/agentic-commerce-skills-plugins
+cd agentic-commerce-skills-plugins
 python scripts/convert.py --platform gemini
 
 gemini extensions install --path dist/gemini/spree-commerce
@@ -98,7 +98,7 @@ If the UCP plugin's source content changes (new skill, updated agent expertise, 
    ```
 7. **Wait ~24h** — the gallery crawler runs daily and will pick up the new release.
 
-Note: the root manifest's `repository.url` must point at `https://github.com/OrcaQubits/agentic-commerce-claude-plugins` (NOT `AgenticCommerce/...` which is the default placeholder some converter outputs use). Verify before pushing.
+Note: the root manifest's `repository.url` must point at `https://github.com/OrcaQubits/agentic-commerce-skills-plugins` (NOT `AgenticCommerce/...` which is the default placeholder some converter outputs use). Verify before pushing.
 
 ## Initial gallery onboarding (one-time)
 
@@ -106,7 +106,7 @@ Done once for this repo; documented here for reference:
 
 ```bash
 # 1. Ensure topic is set
-gh repo edit OrcaQubits/agentic-commerce-claude-plugins --add-topic gemini-cli-extension
+gh repo edit OrcaQubits/agentic-commerce-skills-plugins --add-topic gemini-cli-extension
 
 # 2. Push the v1.0.0 tag
 git tag v1.0.0
@@ -122,7 +122,7 @@ The crawler discovers the repo via the topic and indexes daily.
 
 | Symptom | Fix |
 |---------|-----|
-| Repo not appearing in gallery after 48h | Confirm topic is set: `gh repo view OrcaQubits/agentic-commerce-claude-plugins --json repositoryTopics`. Topic must be `gemini-cli-extension` (singular). |
+| Repo not appearing in gallery after 48h | Confirm topic is set: `gh repo view OrcaQubits/agentic-commerce-skills-plugins --json repositoryTopics`. Topic must be `gemini-cli-extension` (singular). |
 | `gemini extensions install` fails with "manifest not found" | The user is on an old commit before the root manifest existed, or they're targeting a tag without the root files. Use `--ref main`. |
 | Hook fires but reports script not found | Confirm `scripts/check_secrets.py` is committed at repo root (not just in `dist/gemini/.../scripts/`). |
 | Gallery shows outdated version | The crawler reads the latest **GitHub Release**, not the latest commit. Tag a new release with the matching `version` field. |
