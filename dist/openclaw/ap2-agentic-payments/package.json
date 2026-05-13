@@ -1,5 +1,5 @@
 {
-  "name": "@ichiorca/openclaw-ap2-agentic-payments",
+  "name": "@orcaqubits/openclaw-ap2-agentic-payments",
   "version": "1.0.0",
   "description": "Expert AP2 (Agent Payments Protocol) knowledge for building agentic commerce payment modules — Verifiable Digital Credentials, mandates, cryptographic signing, transaction flows, and multi-agent payment orchestration.",
   "type": "module",

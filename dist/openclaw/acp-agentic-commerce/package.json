@@ -1,5 +1,5 @@
 {
-  "name": "@ichiorca/openclaw-acp-agentic-commerce",
+  "name": "@orcaqubits/openclaw-acp-agentic-commerce",
   "version": "1.0.0",
   "description": "Expert subagent and skills for implementing the Agentic Commerce Protocol (ACP) — the open standard by OpenAI and Stripe for AI-agent-mediated commerce.",
   "type": "module",

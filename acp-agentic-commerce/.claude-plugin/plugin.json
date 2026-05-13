@@ -6,6 +6,12 @@
     "name": "Rohit Bajaj, Julekha Khatun",
     "url": "https://orcaqubits-ai.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins",
+    "directory": "acp-agentic-commerce"
+  },
+  "homepage": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/acp-agentic-commerce",
   "keywords": [
     "acp",
     "agentic-commerce",

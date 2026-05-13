@@ -1,5 +1,5 @@
 {
-  "name": "@ichiorca/openclaw-webmcp-browser-agents",
+  "name": "@orcaqubits/openclaw-webmcp-browser-agents",
   "version": "1.0.0",
   "description": "WebMCP (Web Model Context Protocol) — browser-native API for agent-ready websites, enabling structured tool registration, declarative forms, human-in-the-loop commerce, and MCP-B polyfill integration.",
   "type": "module",

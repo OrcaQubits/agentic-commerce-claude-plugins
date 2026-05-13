@@ -6,6 +6,12 @@
     "name": "Rohit Bajaj, Julekha Khatun",
     "url": "https://orcaqubits-ai.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins",
+    "directory": "webmcp-browser-agents"
+  },
+  "homepage": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/webmcp-browser-agents",
   "keywords": [
     "webmcp",
     "web-model-context-protocol",

@@ -6,6 +6,12 @@
     "name": "Rohit Bajaj, Julekha Khatun",
     "url": "https://orcaqubits-ai.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins",
+    "directory": "stripe-mpp"
+  },
+  "homepage": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/stripe-mpp",
   "keywords": [
     "mpp",
     "machine-payments",

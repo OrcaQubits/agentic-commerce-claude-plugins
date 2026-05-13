@@ -6,6 +6,12 @@
     "name": "Rohit Bajaj, Julekha Khatun",
     "url": "https://orcaqubits-ai.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins",
+    "directory": "nlweb-protocol"
+  },
+  "homepage": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/nlweb-protocol",
   "keywords": [
     "nlweb",
     "natural-language-web",

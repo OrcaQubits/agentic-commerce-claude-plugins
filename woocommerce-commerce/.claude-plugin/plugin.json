@@ -6,6 +6,12 @@
     "name": "Rohit Bajaj, Julekha Khatun",
     "url": "https://orcaqubits-ai.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins",
+    "directory": "woocommerce-commerce"
+  },
+  "homepage": "https://github.com/OrcaQubits/agentic-commerce-skills-plugins/tree/main/woocommerce-commerce",
   "keywords": [
     "woocommerce",
     "wordpress",

@@ -1,5 +1,5 @@
 {
-  "name": "@ichiorca/openclaw-spree-commerce",
+  "name": "@orcaqubits/openclaw-spree-commerce",
   "version": "1.0.0",
   "description": "Spree Commerce expert for building open-source Rails e-commerce — covers the v5+ architecture (consolidated `spree` umbrella gem, Tailwind admin dashboard, API v3 flat-JSON + OpenAPI), Order/Payment/Shipment state machines, Extensions and Decorators (prepend), the Event Bus + Webhooks 2.0, Promotions engine, Payment Sessions (Stripe/Adyen/PayPal), Multi-store + Markets + Marketplace, the Next.js headless storefront, `@spree/sdk` TypeScript SDK, RSpec testing with `spree_dev_tools`, and Docker/PostgreSQL/Redis/Sidekiq deployment.",
   "type": "module",

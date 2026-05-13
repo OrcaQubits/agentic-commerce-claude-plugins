@@ -1,5 +1,5 @@
 {
-  "name": "@ichiorca/openclaw-shopify-commerce",
+  "name": "@orcaqubits/openclaw-shopify-commerce",
   "version": "1.0.0",
   "description": "Expert subagent and skills for Shopify development — GraphQL Admin and Storefront APIs, Liquid templating, Online Store 2.0 themes, Hydrogen/Remix headless storefronts, Shopify Functions, checkout UI extensions, Polaris components, app development with App Bridge, webhooks, and JavaScript/TypeScript/React patterns.",
   "type": "module",

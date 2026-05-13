@@ -1,5 +1,5 @@
 {
-  "name": "@ichiorca/openclaw-bigcommerce-commerce",
+  "name": "@orcaqubits/openclaw-bigcommerce-commerce",
   "version": "1.0.0",
   "description": "Expert subagent and skills for BigCommerce development — Stencil themes, REST/GraphQL APIs, single-click apps, checkout SDK, payment integrations, headless with Catalyst/Next.js, multi-channel, webhooks, and Node.js/JavaScript patterns.",
   "type": "module",

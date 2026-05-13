@@ -357,14 +357,14 @@ def validate_codex_agent_toml(path: Path, result: ValidationResult) -> None:
 def validate_codex(dist_dir: Path, result: ValidationResult) -> None:
     """Validate the dist/codex/ tree.
 
-    Expected Codex CLI layout per plugin:
-      AGENTS.md                        (agent expertise as context)
-      .codex/agents/<name>.toml        (subagent definitions)
-      .agents/skills/<skill>/SKILL.md  (skills)
-      scripts/*.py                     (standalone hook scripts)
-
-    Note: No config.toml is expected — Codex CLI does not have per-tool
-    lifecycle hooks.
+    Expected Codex CLI plugin-bundle layout per plugin
+    (https://developers.openai.com/codex/plugins/build):
+      .codex-plugin/plugin.json         (plugin manifest — required)
+      AGENTS.md                         (agent expertise as context)
+      agents/<name>.toml                (subagent definitions, bundle-source)
+      skills/<skill>/SKILL.md           (skills, bundle-source)
+      hooks/hooks.json                  (plugin-bundled hooks, v0.128+)
+      scripts/*.py                      (standalone hook scripts)
     """
     codex_dir = dist_dir / "codex"
     if not codex_dir.is_dir():
@@ -382,6 +382,13 @@ def validate_codex(dist_dir: Path, result: ValidationResult) -> None:
         if not plugin_dir.is_dir():
             continue
 
+        # .codex-plugin/plugin.json
+        plugin_json = plugin_dir / ".codex-plugin" / "plugin.json"
+        if plugin_json.is_file():
+            result.ok()
+        else:
+            result.warn(f"{plugin_dir.name}: missing .codex-plugin/plugin.json")
+
         # AGENTS.md
         agents_md = plugin_dir / "AGENTS.md"
         if agents_md.is_file():
@@ -389,29 +396,21 @@ def validate_codex(dist_dir: Path, result: ValidationResult) -> None:
         else:
             result.warn(f"{plugin_dir.name}: missing AGENTS.md")
 
-        # No config.toml expected (Codex has no per-tool hooks)
-        config_toml = plugin_dir / ".codex" / "config.toml"
-        if config_toml.is_file():
-            result.warn(
-                f"{plugin_dir.name}: .codex/config.toml present but should not "
-                "be generated — Codex CLI has no per-tool lifecycle hooks"
-            )
-
-        # .codex/agents/*.toml
-        codex_agents_dir = plugin_dir / ".codex" / "agents"
-        if codex_agents_dir.is_dir():
-            for toml_file in sorted(codex_agents_dir.glob("*.toml")):
+        # agents/*.toml (bundle-source path)
+        agents_dir = plugin_dir / "agents"
+        if agents_dir.is_dir():
+            for toml_file in sorted(agents_dir.glob("*.toml")):
                 validate_codex_agent_toml(toml_file, result)
         else:
-            result.warn(f"{plugin_dir.name}: missing .codex/agents/ directory")
+            result.warn(f"{plugin_dir.name}: missing agents/ directory")
 
-        # .agents/skills/
-        agents_skills = plugin_dir / ".agents" / "skills"
-        if agents_skills.is_dir():
-            for skill_md in sorted(agents_skills.rglob("SKILL.md")):
+        # skills/<name>/SKILL.md (bundle-source path)
+        skills_dir = plugin_dir / "skills"
+        if skills_dir.is_dir():
+            for skill_md in sorted(skills_dir.rglob("SKILL.md")):
                 validate_skill_md(skill_md, result)
         else:
-            result.warn(f"{plugin_dir.name}: missing .agents/skills/ directory")
+            result.warn(f"{plugin_dir.name}: missing skills/ directory")
 
 
 def validate_openclaw_manifest(path: Path, result: ValidationResult) -> None:

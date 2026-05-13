@@ -1,5 +1,5 @@
 {
-  "name": "@ichiorca/openclaw-a2a-multi-agent",
+  "name": "@orcaqubits/openclaw-a2a-multi-agent",
   "version": "1.0.0",
   "description": "Expert A2A (Agent-to-Agent) protocol knowledge for building multi-agent systems — Agent Cards, task lifecycle, streaming, push notifications, authentication, and framework integrations.",
   "type": "module",
